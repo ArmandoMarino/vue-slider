@@ -31,8 +31,8 @@
                         <p>Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.</p>
                     </div>
                 </div>
-                <div class="col-8">
-                    <img class="thumb" src="img/01.webp" alt="Spiderman">
+                <div id="thumbnails" class="col-8">
+                    <img v-for= "(pic, i) in pictures" :class= "{'active-thumb': i === currentIndex}" v-bind:src="pic.image" v-bind:alt="pic.title">
                 </div>
             </div>
 
