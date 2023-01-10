@@ -66,6 +66,9 @@ const app = Vue.createApp({
       if(this.currentIndex === this.pictures.length ){
         this.currentIndex = 0;
     }
+    },
+    startTimer(){
+      setInterval(this.goToNext, 1000);
     }
   }
 });

@@ -18,9 +18,9 @@
 </head>
 <body>
     <main>
-        <div class="container" id="root">
+        <div class="container" id="root" @mouseover = "startTimer">
 
-            <i id="prev" class="fa-solid fa-circle-arrow-up fa-2xl" @click="goToPrev" ></i>
+            <i id="prev" class="fa-solid fa-circle-arrow-left fa-2xl" @click="goToPrev" ></i>
 
             <!--! V-FOR -->
             <div v-for="(pic, i) in pictures" v-show= "i === currentIndex" id="img-wrapper" class=" row justify-content-center">
@@ -33,11 +33,11 @@
                     </div>
                 </div>
                 <div id="thumbnails" class="col-8">
-                    <img v-for= "(pic, i) in pictures" :class= "{'active-thumb': i === currentIndex}" v-bind:src="pic.image" v-bind:alt="pic.title">
+                    <img v-for= "(pic, i) in pictures" :class= "{'active-thumb': i === currentIndex}" v-bind:src="pic.image" v-bind:alt="pic.title" @click="">
                 </div>
             </div>
 
-            <i id="next" class="fa-solid fa-circle-arrow-down fa-2xl" @click="goToNext"></i>
+            <i id="next" class="fa-solid fa-circle-arrow-right fa-2xl" @click="goToNext"></i>
 
         </div>
     </main>
