@@ -39,9 +39,11 @@
 #thumbnails img{
     margin-top: 10px;
     width: 20%;
-    height: 50px;
+    height: 70px;
     object-fit: cover;
     filter: grayscale(100%);
+    padding : 5px;
+    border-radius: 15px;
 }
 
 #thumbnails .active-thumb{
